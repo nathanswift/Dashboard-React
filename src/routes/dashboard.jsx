@@ -3,9 +3,10 @@ import UserProfile from "views/UserProfile/UserProfile";
 import TableList from "views/TableList/TableList";
 import Typography from "views/Typography/Typography";
 import Icons from "views/Icons/Icons";
-import Maps from "views/Maps/Maps";
 import Notifications from "views/Notifications/Notifications";
-import Upgrade from "views/Upgrade/Upgrade";
+import Messages from "views/Messages/Messages"
+import Calendar from 'views/Calendar/Calendar'
+import Payments from 'views/Payments/Payments'
 
 const dashboardRoutes = [
   {
@@ -22,9 +23,27 @@ const dashboardRoutes = [
   },
   {
     path: "/table",
-    name: "Table List",
+    name: "Task Board",
     icon: "pe-7s-note2",
     component: TableList
+  },
+  {
+    path: "/messages",
+    name: "Messages",
+    icon: "pe-7s-mail-open-file",
+    component: Messages
+  },
+  {
+    path: "/calendar",
+    name: "Calendar",
+    icon: "pe-7s-date",
+    component: Calendar
+  },
+  {
+    path: "/payments",
+    name: "Payments",
+    icon: "pe-7s-credit",
+    component: Payments
   },
   {
     path: "/typography",
@@ -33,19 +52,11 @@ const dashboardRoutes = [
     component: Typography
   },
   { path: "/icons", name: "Icons", icon: "pe-7s-science", component: Icons },
-  { path: "/maps", name: "Maps", icon: "pe-7s-map-marker", component: Maps },
   {
     path: "/notifications",
     name: "Notifications",
     icon: "pe-7s-bell",
     component: Notifications
-  },
-  {
-    upgrade: true,
-    path: "/upgrade",
-    name: "Upgrade to PRO",
-    icon: "pe-7s-rocket",
-    component: Upgrade
   },
   { redirect: true, path: "/", to: "/dashboard", name: "Dashboard" }
 ];
